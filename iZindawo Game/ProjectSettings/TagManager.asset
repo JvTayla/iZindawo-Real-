@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Blue Heart Zone
+  - Yellow Heart Zone
+  - PinkHeartZone
+  - YellowPerimeter
+  - BluePerimeter
+  - PinkPerimeter
+  - Intersection
   layers:
   - Default
   - TransparentFX
