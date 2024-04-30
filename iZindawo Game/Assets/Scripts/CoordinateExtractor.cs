@@ -7,7 +7,9 @@ public class CoordinateExtractor : MonoBehaviour
     // Dictionary to store sprite positions based on their names
     private Dictionary<string, Vector2> spritePositions = new Dictionary<string, Vector2>();
 
-   void Start()
+    public Dictionary<string, Vector2> SpritePositions { get => spritePositions; set => spritePositions = value; }
+
+    void Start()
         {
             // Array of sprite names
             string[] spriteNames = {
@@ -37,19 +39,19 @@ public class CoordinateExtractor : MonoBehaviour
                 Vector2 coordinates = ExtractCoordinates(spriteName);
 
                 // Store the coordinates in the dictionary
-                spritePositions.Add(spriteName, coordinates);
+                SpritePositions.Add(spriteName, coordinates);
             }
 
             // Example usage: Retrieve the starting position of a sprite
-            Vector2 startingPosition = spritePositions["P(2,2)"];
+            Vector2 startingPosition = SpritePositions["P(2,2)"];
             Debug.Log("Starting position of sprite P(2,2): " + startingPosition);
         }
 
         // Function to extract the coordinates from a sprite name
         private Vector2 ExtractCoordinates(string spriteName)
         {
-            // Extract the coordinate substring
-            string coordinateSubstring = spriteName.Substring(spriteName.IndexOf('(') + 1);
+        // Extract the coordinate substring
+        string coordinateSubstring = spriteName.Substring(spriteName.IndexOf('(') + 1);
             // Remove the closing parenthesis
             coordinateSubstring = coordinateSubstring.Remove(coordinateSubstring.Length - 1);
 
