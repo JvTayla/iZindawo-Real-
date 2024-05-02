@@ -15,6 +15,7 @@ TagManager:
   - GridCell
   - TurnController
   - Timer
+  - PlaceHolder
   layers:
   - Default
   - TransparentFX
