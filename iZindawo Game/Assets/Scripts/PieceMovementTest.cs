@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 //public class PieceMovementTest : MonoBehaviour
 
@@ -136,10 +140,10 @@ using UnityEngine.EventSystems;
 
 
 
-public class PieceMovementTest : MonoBehaviour
+/*public class PieceMovementTest : MonoBehaviour
 {
     // Reference to the GridOccupancyChecker script
-    public GridOccupancy gridOccupancyChecker;
+    //public GridOccupancy gridOccupancyChecker;
 
     // Movement speed of the piece
     public float moveSpeed = 5f;
@@ -169,41 +173,26 @@ public class PieceMovementTest : MonoBehaviour
         {
             // Calculate the target position based on mouse click
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPosition.z = -1f; // Ensure z position is 0 (2D)
+            targetPosition.z = -1f; // Ensure z position is -1 (2D)
 
             // Cast a ray from the piece's position in the direction of the target position
             RaycastHit2D hit = Physics2D.Raycast(transform.position, targetPosition - transform.position, 1f, LayerMask.GetMask("GridCell"));
-
-            // Check if the ray hit a grid cell
             if (hit.collider != null)
             {
-                // Get the grid position of the hit cell
-                int gridPos = gridOccupancyChecker.WorldToGridPosition(hit.point);
-
-                // Check if the grid cell is occupied
-                if (!gridOccupancyChecker.IsGridPositionOccupied(gridPos))
-                {
-                    // Move the piece towards the target position
-                    transform.position = Vector3.MoveTowards(transform.position, hit.point, moveSpeed * Time.deltaTime);
-
-                    // Check if the piece has reached the target position
-                    if (Vector3.Distance(transform.position, hit.point) < 0.1f)
-                    {
-                        // Snap the piece to the target position
-                        transform.position = hit.point;
-                    }
-                }
-                else
-                {
-                    // If the grid cell is occupied, snap the piece back to its previous position
-                    transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-                }
+                Vector3 position = new Vector3(hit.collider.bounds.center.x, hit.collider.bounds.center.y, -1);
+                transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
             }
             else
             {
-                // If the ray didn't hit a grid cell, snap the piece back to its previous position
+                // If the grid cell is occupied, snap the piece back to its previous position
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             }
+
+        }
+        else
+        {
+            // If the ray didn't hit a grid cell, snap the piece back to its previous position
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
     }
 
@@ -212,6 +201,91 @@ public class PieceMovementTest : MonoBehaviour
     {
         isSelected = selected;
     }
+}*/
+
+
+/*
+// Check if the ray hit a grid cell
+if (hit.collider != null)
+{
+    Vector3 position = new Vector3(hit.collider.bounds.center.x, hit.collider.bounds.center.y, -1);
+    // Get the grid position of the hit cell
+    int gridPos = gridOccupancyChecker.WorldToGridPosition(hit.point);
+
+    // Check if the grid cell is occupied
+    if (!gridOccupancyChecker.IsGridPositionOccupied(gridPos))
+    {
+        // Move the piece towards the target position
+        transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+
+        // Check if the piece has reached the target position
+        if (Vector3.Distance(transform.position, position) < 0.1f)
+        {
+            // Snap the piece to the target position
+            transform.position = position;
+        }
+    }
+    else
+    {
+        // If the grid cell is occupied, snap the piece back to its previous position
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+    }
 }
+else
+{
+    // If the ray didn't hit a grid cell, snap the piece back to its previous position
+    transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+}*/
 
 
+public class PieceMovementTest : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private Vector3 startPosition;
+    private bool isSelected = false;
+
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, targetPosition - transform.position, 1f, LayerMask.GetMask("Grid"));
+            if (hit.collider != null)
+            {
+                Vector3 position = hit.collider.bounds.center;
+                transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            }
+
+            if (hit.collider == null)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, startPosition, moveSpeed * Time.deltaTime);
+            }
+        }
+       
+    }
+
+    public void SetSelected(bool selected)
+    {
+        isSelected = selected;
+    }
+}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GridOccupancy : MonoBehaviour
 { 
     // Reference to the GridHandler script
-    public GridHandler gridHandler;
+   
     public GridManager gridManager;
 
     // Array to store occupancy status of each grid cell
@@ -65,7 +65,7 @@ public class GridOccupancy : MonoBehaviour
         // Iterate through each grid cell object to find the one containing the world position
         for (int i = 0; i < gridManager.pinkCells.Length; i++)
         {
-            if (gridHandler.pinkZone[i].GetComponent<Collider2D>().bounds.Contains(worldPosition))
+            if (gridManager.pinkCells[i].GetComponent<Collider2D>().bounds.Contains(worldPosition))
             {
                 return i;
             }

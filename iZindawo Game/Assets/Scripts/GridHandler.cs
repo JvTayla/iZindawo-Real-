@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridHandler : MonoBehaviour
+/*public class GridHandler : MonoBehaviour
 {
     public List<GameObject> pinkZone = new List<GameObject>(); // List to store pink zone objects
     public List<GameObject> blueZone = new List<GameObject>(); // List to store blue zone objects
@@ -30,3 +30,4 @@ public class GridHandler : MonoBehaviour
     //    return Vector2Int.zero; // Placeholder return value
     //}
 }
+*/
