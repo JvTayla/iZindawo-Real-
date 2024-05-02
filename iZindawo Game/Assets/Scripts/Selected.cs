@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class Selected : MonoBehaviour
+//*public class Selected : MonoBehaviour
 //{
 //    public Color HighlightColor;
 //    public Color SelectColor;
@@ -65,9 +65,9 @@ public class Selected : MonoBehaviour
 //            }
 //        }
 //    }
-//}
+//}*/
 
-{
+/*{
 public Color HighlightColor;
 public Color SelectColor;
 
@@ -112,7 +112,105 @@ void Update()
             }
         }
     }
-}
+}*/
+
+
+/*public class Selected : MonoBehaviour
+{
+    public Color HighlightColor;
+    public Color SelectColor;
+
+    private Color OriginalColor;
+    private PieceMovementTest pieceMovementTest;
+
+    void Start()
+    {
+        pieceMovementTest = GetComponent<PieceMovementTest>();
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                if (hit.transform.CompareTag("Piece"))
+                {
+                    if (pieceMovementTest != null)
+                    {
+                        // Set the selected state of the piece
+                        pieceMovementTest.SetSelected(true);
+
+                        // Change the color of the piece to indicate selection
+                        OriginalColor = GetComponent<SpriteRenderer>().color;
+                        GetComponent<SpriteRenderer>().color = SelectColor;
+                    }
+                }
+            }
+            else
+            {
+                // No piece was clicked, so deselect any previously selected piece
+                if (pieceMovementTest != null)
+                {
+                    pieceMovementTest.SetSelected(false);
+
+                    // Restore the original color of the previously selected piece
+                    GetComponent<SpriteRenderer>().color = OriginalColor;
+                }
+            }
+        }
+    }
+}*/
+
+public class Selected : MonoBehaviour
+{
+    public Color HighlightColor;
+    public Color SelectColor;
+
+    private Color OriginalColor;
+    private PieceMovementTest pieceMovementTest;
+
+    void Start()
+    {
+        pieceMovementTest = GetComponent<PieceMovementTest>();
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                if (hit.transform.CompareTag("Piece"))
+                {
+                    if (pieceMovementTest != null)
+                    {
+                        // Set the selected state of the piece
+                        pieceMovementTest.SetSelected(true);
+
+                        // Change the color of the piece to indicate selection
+                        OriginalColor = GetComponent<SpriteRenderer>().color;
+                        GetComponent<SpriteRenderer>().color = SelectColor;
+                    }
+                }
+            }
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            // Right-click to deselect
+            if (pieceMovementTest != null)
+            {
+                pieceMovementTest.SetSelected(false);
+
+                // Restore the original color of the previously selected piece
+                GetComponent<SpriteRenderer>().color = OriginalColor;
+            }
+        }
+    }
 }
 
 

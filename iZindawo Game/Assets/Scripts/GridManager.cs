@@ -7,10 +7,10 @@ public class GridManager : MonoBehaviour
 {
     
     public GameObject[] pinkCells;
-    public GameObject[] blueCells;
+   /* public GameObject[] blueCells;
     public GameObject[] yellowCells;
     public GameObject[] intersectionCells;
-    public GameObject[] whiteBlockCells;
+    public GameObject[] whiteBlockCells;*/
 
     void Start()
     {

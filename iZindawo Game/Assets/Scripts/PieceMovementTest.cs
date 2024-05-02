@@ -7,6 +7,363 @@ using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
+
+public class PieceMovementTest : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private bool isSelected = false;
+    private GridOccupancyHandler gridOccupancyHandler;
+    private int myGridIndex = -1;
+
+    void Start()
+    {
+        gridOccupancyHandler = FindObjectOfType<GridOccupancyHandler>();
+        myGridIndex = System.Array.IndexOf(gridOccupancyHandler.pieces, gameObject);
+    }
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            if (CanMove())
+            {
+                transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            }
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+            transform.position = position;
+        }
+    }
+
+    public void SetSelected(bool selected)
+    {
+        isSelected = selected;
+    }
+
+    public bool CanMove()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, targetPosition - transform.position, 1f, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            int targetGridIndex = System.Array.IndexOf(gridOccupancyHandler.pieces, hit.collider.gameObject);
+            return !gridOccupancyHandler.IsGridCellOccupied(targetGridIndex);
+        }
+        return true;
+    }
+}
+
+/*public class PieceMovementTest : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private bool isSelected = false;
+    private GridOccupancyHandler gridOccupancyHandler;
+    private int myGridIndex = -1;
+
+    void Start()
+    {
+        gridOccupancyHandler = FindObjectOfType<GridOccupancyHandler>();
+        myGridIndex = System.Array.IndexOf(gridOccupancyHandler.pieces, gameObject);
+    }
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            if (CanMove())
+            {
+                transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            }
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+
+            if (!gridOccupancyHandler.IsGridCellOccupied(myGridIndex))
+            {
+                transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+            }
+        }
+    }
+
+    public void SetSelected(bool selected)
+    {
+        isSelected = selected;
+    }
+
+    public bool CanMove()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, targetPosition - transform.position, 1f, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            int targetGridIndex = System.Array.IndexOf(gridOccupancyHandler.pieces, hit.collider.gameObject);
+            return !gridOccupancyHandler.IsGridCellOccupied(targetGridIndex);
+        }
+        return true;
+    }
+}*/
+
+
+
+/* Yippeeee it helps move the pieces one by one , and pieces snap to the collider centre 
+ * 
+public class PieceMovementTest : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private bool isSelected = false;
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+
+            transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void SetSelected(bool selected)
+    {
+        isSelected = selected;
+    }
+}*/
+
+
+
+/*public class PieceMovementTest : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private bool isSelected = false;
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+
+            transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void SetSelected(bool selected)
+    {
+        isSelected = selected;
+    }
+}*/
+
+
+/*public class PieceMovementTest : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private Vector3 startPosition;
+    private bool isSelected = false;
+    private Collider2D currentCollider = null;
+
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+            transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void SetSelected(bool selected)
+    {
+        isSelected = selected;
+    }
+}*/
+
+/*public class PieceMovementTest : MonoBehaviour
+{
+    public GameObject[] pieces;
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private bool isSelected = false;
+    private int selectedPieceIndex = -1;
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            pieces[selectedPieceIndex].transform.position = Vector3.MoveTowards(pieces[selectedPieceIndex].transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+
+            for (int i = 0; i < pieces.Length; i++)
+            {
+                pieces[i].transform.position = Vector3.MoveTowards(pieces[i].transform.position, position, moveSpeed * Time.deltaTime);
+            }
+        }
+    }
+
+    public void SetSelected(int index)
+    {
+        if (selectedPieceIndex != index)
+        {
+            selectedPieceIndex = index;
+            isSelected = true;
+        }
+        else
+        {
+            selectedPieceIndex = -1;
+            isSelected = false;
+        }
+    }
+}*/
+
+
 //public class PieceMovementTest : MonoBehaviour
 
 //{
@@ -238,7 +595,7 @@ else
 }*/
 
 
-public class PieceMovementTest : MonoBehaviour
+/*public class PieceMovementTest : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Vector3 targetPosition;
@@ -269,6 +626,7 @@ public class PieceMovementTest : MonoBehaviour
             if (hit.collider != null)
             {
                 Vector3 position = hit.collider.bounds.center;
+                position.z = -1f; //ensure z valyue stays at -1
                 transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
             }
             else
@@ -288,4 +646,124 @@ public class PieceMovementTest : MonoBehaviour
     {
         isSelected = selected;
     }
+}*/
+
+/*using UnityEngine;
+
+public class PieceMovementTest : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private bool isSelected = false;
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+            transform.position = Vector3.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void SetSelected(bool selected)
+    {
+        isSelected = selected;
+    }
+}/*
+
+   
+    
+    public class PieceMovementTest : MonoBehaviour
+{
+    public GameObject[] pieces;
+    public float moveSpeed = 5f;
+    private Vector3 targetPosition;
+    private bool isSelected = false;
+    private int selectedPieceIndex = -1;
+
+    void Update()
+    {
+        if (isSelected)
+        {
+            MovePiece();
+        }
+        else
+        {
+            SnapToNearestGridCollider();
+        }
+    }
+
+    private void MovePiece()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = -1f;
+
+            pieces[selectedPieceIndex].transform.position = Vector3.MoveTowards(pieces[selectedPieceIndex].transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void SnapToNearestGridCollider()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Grid"));
+        if (hit.collider != null)
+        {
+            Vector3 position = hit.collider.bounds.center;
+            position.z = -1f;
+
+            for (int i = 0; i < pieces.Length; i++)
+            {
+                pieces[i].transform.position = Vector3.MoveTowards(pieces[i].transform.position, position, moveSpeed * Time.deltaTime);
+            }
+        }
+    }
+
+    public void SetSelected(int index)
+    {
+        if (selectedPieceIndex != index)
+        {
+            selectedPieceIndex = index;
+            isSelected = true;
+        }
+        else
+        {
+            selectedPieceIndex = -1;
+            isSelected = false;
+        }
+    }
 }
+
+
+
+
+
+
+
+
+*/

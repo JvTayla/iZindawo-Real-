@@ -2,7 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridOccupancy : MonoBehaviour
+
+
+
+public class GridOccupancyHandler : MonoBehaviour
+{
+    public GameObject[] pieces;
+    private bool[] gridOccupancy;
+
+    void Start()
+    {
+        gridOccupancy = new bool[pieces.Length];
+    }
+
+    public bool IsGridCellOccupied(int index)
+    {
+        return index >= 0 && index < gridOccupancy.Length && gridOccupancy[index];
+    }
+
+    public void SetGridCellOccupied(int index, bool occupied)
+    {
+        if (index >= 0 && index < gridOccupancy.Length)
+        {
+            gridOccupancy[index] = occupied;
+        }
+    }
+}
+
+
+/*public class GridOccupancy : MonoBehaviour
 { 
     // Reference to the GridHandler script
    
@@ -105,6 +133,6 @@ public class GridOccupancy : MonoBehaviour
             Debug.Log("asdsa");
         }
     }
-}
+}*/
 
 
