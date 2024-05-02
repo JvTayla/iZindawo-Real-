@@ -21,7 +21,7 @@ public class Intersection : MonoBehaviour
         // Find placeholders within the intersection
         foreach (Transform child in transform)
         {
-            if (child.CompareTag("Placeholder"))
+            if (child.CompareTag("PlaceHolder"))
             {
                 placeholders.Add(child);
             }

@@ -13,6 +13,7 @@ TagManager:
   - Intersection
   - Piece
   - GridCell
+  - PlaceHolder
   layers:
   - Default
   - TransparentFX
