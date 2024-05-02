@@ -9,7 +9,6 @@ public class GridManager : MonoBehaviour
     public GameObject[] pinkCells;
     public GameObject[] blueCells;
     public GameObject[] yellowCells;
-    public GameObject[] intersectionCells;
     public GameObject[] whiteBlockCells;
 
     void Start()
@@ -23,8 +22,6 @@ public class GridManager : MonoBehaviour
         // Calculate grid layout for yellow cells
        CalculateGridLayout(yellowCells);
 
-        // Calculate grid layout for intersection cells
-      CalculateGridLayout(intersectionCells);
 
         // Calculate grid layout for white block cells
        CalculateGridLayout(whiteBlockCells);

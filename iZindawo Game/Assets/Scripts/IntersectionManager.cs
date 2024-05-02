@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class IntersectionManager : MonoBehaviour
 {
+    public GameObject[] placeholderI1;
+    public GameObject[] placeholderI2;
+    public GameObject[] placeholderI3;
+
     // Board grid size
     private int gridSizeX = 5;
     private int gridSizeY = 5;
@@ -69,9 +73,34 @@ public class IntersectionManager : MonoBehaviour
     // Method to move pieces into the intersection
     private void MovePiecesIntoIntersection(GameObject intersection, List<GameObject> pieces)
     {
+        List<Transform> placeholders = intersection.GetComponent<Intersection>().GetPlaceholders();
+
         foreach (GameObject piece in pieces)
         {
-            piece.transform.position = intersection.transform.position;
+            // Find the nearest placeholder to the current piece
+            Transform nearestPlaceholder = FindNearestPlaceholder(piece.transform.position, placeholders);
+
+            // Snap the piece to the nearest placeholder
+            piece.transform.position = nearestPlaceholder.position;
         }
+    }
+
+    // Method to find the nearest placeholder to a given position
+    private Transform FindNearestPlaceholder(Vector3 position, List<Transform> placeholders)
+    {
+        Transform nearestPlaceholder = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach (Transform placeholder in placeholders)
+        {
+            float distance = Vector3.Distance(position, placeholder.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearestPlaceholder = placeholder;
+            }
+        }
+
+        return nearestPlaceholder;
     }
 }

@@ -10,10 +10,22 @@ public class Intersection : MonoBehaviour
     // List to store pieces currently in the intersection
     private List<GameObject> piecesInIntersection = new List<GameObject>();
 
-    // Method to initialize IntersectionManager reference
+    // List to store placeholders in the intersection
+    private List<Transform> placeholders = new List<Transform>();
+
+    // Method to initialize IntersectionManager reference and placeholders
     private void Start()
     {
         intersectionManager = GameObject.FindObjectOfType<IntersectionManager>();
+
+        // Find placeholders within the intersection
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Placeholder"))
+            {
+                placeholders.Add(child);
+            }
+        }
     }
 
     // Method to add a piece to the intersection
@@ -44,5 +56,11 @@ public class Intersection : MonoBehaviour
     public void CheckForAdjacentPieces(GameObject[] pieces)
     {
         intersectionManager.CheckForAdjacentPieces(gameObject, pieces);
+    }
+
+    // Method to get placeholders in the intersection
+    public List<Transform> GetPlaceholders()
+    {
+        return placeholders;
     }
 }
