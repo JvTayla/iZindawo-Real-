@@ -7,16 +7,14 @@ public class RayCast : MonoBehaviour
 {
     private GameObject selectedPiece;
     private Color originalColor;
-
+    public LayerMask layersToHit;
     void Update()
     {
         // Check if the left mouse button is pressed
         if (Input.GetMouseButtonDown(0))
         {
-            // Cast a ray from the camera to the mouse position
+           
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            // Create a RaycastHit variable to store information about the collision
             RaycastHit hit;
 
             // Check if the ray hits any colliders in the scene

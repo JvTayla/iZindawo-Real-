@@ -12,14 +12,15 @@ TagManager:
   - PinkPerimeter
   - Intersection
   - Piece
+  - GridCell
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grid
   - Water
   - UI
-  - 
+  - Pieces
   - 
   - 
   - 
