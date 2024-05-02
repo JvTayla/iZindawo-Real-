@@ -1806,6 +1806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridHandler: {fileID: 179490903}
+  gridManager: {fileID: 919046855}
 --- !u!4 &354319536
 Transform:
   m_ObjectHideFlags: 0
@@ -2503,7 +2504,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: 0}
@@ -2602,7 +2603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c2e43273eaeb3b4b98744f1cbab8f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightColor: {r: 0.6901961, g: 0, b: 0.48235294, a: 0.74509805}
+  HighlightColor: {r: 0.41509432, g: 0, b: 0.29009426, a: 1}
   SelectColor: {r: 1, g: 0.20392157, b: 0.7607843, a: 1}
 --- !u!1 &551624804
 GameObject:
@@ -3021,7 +3022,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3470,85 +3471,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinkCells:
-  - {fileID: 7461706359700929351}
-  - {fileID: 3186889762860240856}
-  - {fileID: 4819402111002700156}
-  - {fileID: 3082731430666283252}
-  - {fileID: 4849896632066312544}
-  - {fileID: 1604263101026426743}
-  - {fileID: 6778253060636848595}
-  - {fileID: 5078474785195194681}
-  - {fileID: 5305716854477186885}
-  - {fileID: 7003301217329849607}
-  - {fileID: 3340773119649543766}
-  - {fileID: 4393228438505709323}
-  - {fileID: 3680699096022755747}
-  - {fileID: 7031692494846564094}
-  - {fileID: 818690507468808195}
-  - {fileID: 6334363180899288430}
-  - {fileID: 1791650937869965671}
-  - {fileID: 236190325962196458}
-  - {fileID: 1008922997615457394}
-  - {fileID: 6372547088111423112}
-  - {fileID: 1817286943011131176}
-  - {fileID: 7197753754165568713}
-  - {fileID: 6156480510992142704}
-  blueCells:
-  - {fileID: 3721881695064840869}
-  - {fileID: 605601925343633551}
-  - {fileID: 1676523583594312225}
-  - {fileID: 7627499212824119677}
-  - {fileID: 6790343545466100019}
-  - {fileID: 8432431934885677600}
-  - {fileID: 1146264041766381879}
-  - {fileID: 6759570253957456932}
-  - {fileID: 2576954192816000297}
-  - {fileID: 8875902098564518416}
-  - {fileID: 267171397789831454}
-  - {fileID: 1313269032822746217}
-  - {fileID: 2110084918317289695}
-  - {fileID: 6969238506026989256}
-  - {fileID: 6625046822447302243}
-  - {fileID: 1937679984408820306}
-  - {fileID: 8057936135410390906}
-  - {fileID: 1265301334128790459}
-  - {fileID: 4729356451816074695}
-  - {fileID: 280610599689642024}
-  - {fileID: 2055965530193501532}
-  - {fileID: 3109733849073368203}
-  - {fileID: 783485013338545954}
-  yellowCells:
-  - {fileID: 6246523414948498047}
-  - {fileID: 3081729894686344688}
-  - {fileID: 4093586869198181962}
-  - {fileID: 904690990990343386}
-  - {fileID: 9107766039671634200}
-  - {fileID: 7685707441927228561}
-  - {fileID: 2053881730141410147}
-  - {fileID: 8262816614612411084}
-  - {fileID: 2251907938934276870}
-  - {fileID: 2058260757329501911}
-  - {fileID: 285751321069803623}
-  - {fileID: 1485047650949771944}
-  - {fileID: 8468218624999025813}
-  - {fileID: 8469284494240634466}
-  - {fileID: 5254227788259099053}
-  - {fileID: 237333831867216257}
-  - {fileID: 7037979722055142003}
-  - {fileID: 3564090129206306390}
-  - {fileID: 4123747696038871549}
-  - {fileID: 201990773564314931}
-  - {fileID: 20012372454291043}
-  - {fileID: 7794130415375919092}
-  - {fileID: 4996303667104246326}
-  intersectionCells:
-  - {fileID: 1957426767316169289}
-  - {fileID: 6204163588815272107}
-  - {fileID: 8802385855108736181}
-  whiteBlockCells:
-  - {fileID: 1886991503472201979}
-  - {fileID: 5195256074776772040}
-  - {fileID: 8592843242349597978}
+  - {fileID: 1590508626}
+  - {fileID: 1649568166}
+  - {fileID: 1856791699}
+  - {fileID: 1223881328}
+  - {fileID: 1971505162}
+  - {fileID: 459469314}
+  - {fileID: 54835098}
+  - {fileID: 1391523814}
+  - {fileID: 440725795}
+  - {fileID: 24326014}
+  - {fileID: 964405951}
+  - {fileID: 1265938259}
+  - {fileID: 690369307}
+  - {fileID: 2084349117}
+  - {fileID: 909807957}
+  - {fileID: 1985279656}
+  - {fileID: 122795617}
+  - {fileID: 1863706485}
+  - {fileID: 585037144}
+  - {fileID: 170676246}
+  - {fileID: 350767639}
+  - {fileID: 986983769}
+  - {fileID: 1181599461}
+  blueCells: []
+  yellowCells: []
+  intersectionCells: []
+  whiteBlockCells: []
 --- !u!1 &964405951
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,6 +4893,37 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!1 &1299450528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1299450529}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1299450529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299450528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.604195, y: -0.1706338, z: -0.065489545}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370373173
 GameObject:
   m_ObjectHideFlags: 0
@@ -5022,7 +5002,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6361,7 +6341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c2e43273eaeb3b4b98744f1cbab8f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightColor: {r: 0.6901961, g: 0, b: 0.48235294, a: 0.72156864}
+  HighlightColor: {r: 0.4716981, g: 0, b: 0.32965258, a: 0.72156864}
   SelectColor: {r: 1, g: 0.20392157, b: 0.7607843, a: 1}
 --- !u!1 &1821816928
 GameObject:
@@ -6660,7 +6640,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7295,7 +7275,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18606,3 +18586,4 @@ SceneRoots:
   - {fileID: 179490904}
   - {fileID: 354319536}
   - {fileID: 502460398}
+  - {fileID: 1299450529}

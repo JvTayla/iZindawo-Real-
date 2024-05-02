@@ -169,7 +169,7 @@ public class PieceMovementTest : MonoBehaviour
         {
             // Calculate the target position based on mouse click
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPosition.z = 0f; // Ensure z position is 0 (2D)
+            targetPosition.z = -1f; // Ensure z position is 0 (2D)
 
             // Cast a ray from the piece's position in the direction of the target position
             RaycastHit2D hit = Physics2D.Raycast(transform.position, targetPosition - transform.position, 1f, LayerMask.GetMask("GridCell"));
@@ -196,13 +196,13 @@ public class PieceMovementTest : MonoBehaviour
                 else
                 {
                     // If the grid cell is occupied, snap the piece back to its previous position
-                    transform.position = Vector3.MoveTowards(transform.position, targetPosition, -moveSpeed * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
                 }
             }
             else
             {
                 // If the ray didn't hit a grid cell, snap the piece back to its previous position
-                transform.position = Vector3.MoveTowards(transform.position, targetPosition, -moveSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             }
         }
     }

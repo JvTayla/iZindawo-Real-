@@ -14,21 +14,21 @@ public class GridOccupancy : MonoBehaviour
     void Start()
     {
         // Ensure the GridHandler script reference is set
-        if (gridHandler == null)
+        if (gridManager == null)
         {
             Debug.LogError("GridHandler reference is not set in GridOccupancyChecker!");
             return;
         }
 
         // Initialize the occupancy status array based on the number of grid cells
-        isOccupied = new bool[gridHandler.pinkZone.Count];
+        isOccupied = new bool[gridManager.pinkCells.Length];
     }
 
     // Function to check if a grid position is occupied
     public bool IsGridPositionOccupied(int cellIndex)
     {
         // Check if the specified cell index is within the bounds of the array
-        if (cellIndex >= 0 && cellIndex < gridHandler.pinkZone.Count)
+        if (cellIndex >= 0 && cellIndex < gridManager.pinkCells.Length)
         {
             return isOccupied[cellIndex];
         }
@@ -43,7 +43,7 @@ public class GridOccupancy : MonoBehaviour
     public void MarkGridPositionOccupied(int cellIndex)
     {
         // Check if the specified cell index is within the bounds of the array
-        if (cellIndex >= 0 && cellIndex < gridHandler.pinkZone.Count)
+        if (cellIndex >= 0 && cellIndex < gridManager.pinkCells.Length)
         {
             isOccupied[cellIndex] = true;
         }
@@ -53,7 +53,7 @@ public class GridOccupancy : MonoBehaviour
     public void MarkGridPositionUnoccupied(int cellIndex)
     {
         // Check if the specified cell index is within the bounds of the array
-        if (cellIndex >= 0 && cellIndex < gridHandler.pinkZone.Count)
+        if (cellIndex >= 0 && cellIndex < gridManager.pinkCells.Length)
         {
             isOccupied[cellIndex] = false;
         }
@@ -63,7 +63,7 @@ public class GridOccupancy : MonoBehaviour
     public int WorldToGridPosition(Vector3 worldPosition)
     {
         // Iterate through each grid cell object to find the one containing the world position
-        for (int i = 0; i < gridHandler.pinkZone.Count; i++)
+        for (int i = 0; i < gridManager.pinkCells.Length; i++)
         {
             if (gridHandler.pinkZone[i].GetComponent<Collider2D>().bounds.Contains(worldPosition))
             {
@@ -85,6 +85,9 @@ public class GridOccupancy : MonoBehaviour
 
             // Mark the corresponding grid position as occupied
             MarkGridPositionOccupied(gridPos);
+
+            Debug.Log("agtfytfy");
+
         }
     }
 
@@ -98,6 +101,8 @@ public class GridOccupancy : MonoBehaviour
 
             // Mark the corresponding grid position as unoccupied
             MarkGridPositionUnoccupied(gridPos);
+
+            Debug.Log("asdsa");
         }
     }
 }
