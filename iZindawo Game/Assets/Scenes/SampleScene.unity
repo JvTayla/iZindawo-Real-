@@ -264,8 +264,10 @@ GameObject:
   - component: {fileID: 51927267}
   - component: {fileID: 51927268}
   - component: {fileID: 51927269}
-  m_Layer: 0
-  m_Name: Circle (1)
+  - component: {fileID: 51927271}
+  - component: {fileID: 51927270}
+  m_Layer: 6
+  m_Name: P Circle (1)
   m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,6 +375,46 @@ CircleCollider2D:
   m_Offset: {x: 0.00000047683716, y: 0.00000059604645}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &51927270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51927266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &51927271
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51927266}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &54835098
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,9 +556,11 @@ GameObject:
   - component: {fileID: 97025005}
   - component: {fileID: 97025006}
   - component: {fileID: 97025007}
-  m_Layer: 0
-  m_Name: Circle (3)
-  m_TagString: Untagged
+  - component: {fileID: 97025009}
+  - component: {fileID: 97025008}
+  m_Layer: 6
+  m_Name: B Circle (3)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -623,6 +667,46 @@ CircleCollider2D:
   m_Offset: {x: 0.0000009536743, y: 0.00000011920929}
   serializedVersion: 2
   m_Radius: 0.5000001
+--- !u!114 &97025008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97025004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &97025009
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97025004}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &122795617
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,9 +978,11 @@ GameObject:
   - component: {fileID: 177660258}
   - component: {fileID: 177660259}
   - component: {fileID: 177660260}
-  m_Layer: 0
-  m_Name: Circle (11)
-  m_TagString: Untagged
+  - component: {fileID: 177660262}
+  - component: {fileID: 177660261}
+  m_Layer: 6
+  m_Name: Y Circle(5)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1003,6 +1089,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &177660261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177660257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &177660262
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177660257}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &197341136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,8 +1140,10 @@ GameObject:
   - component: {fileID: 197341137}
   - component: {fileID: 197341138}
   - component: {fileID: 197341139}
-  m_Layer: 0
-  m_Name: Circle (3)
+  - component: {fileID: 197341141}
+  - component: {fileID: 197341140}
+  m_Layer: 6
+  m_Name: P Circle (3)
   m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1123,6 +1251,46 @@ CircleCollider2D:
   m_Offset: {x: 0.00000047683716, y: 0.00000059604645}
   serializedVersion: 2
   m_Radius: 0.5000002
+--- !u!114 &197341140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197341136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &197341141
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197341136}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &263691252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,8 +1302,10 @@ GameObject:
   - component: {fileID: 263691253}
   - component: {fileID: 263691254}
   - component: {fileID: 263691255}
-  m_Layer: 0
-  m_Name: Circle (5)
+  - component: {fileID: 263691257}
+  - component: {fileID: 263691256}
+  m_Layer: 6
+  m_Name: P Circle (5)
   m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1243,6 +1413,46 @@ CircleCollider2D:
   m_Offset: {x: 0.00000047683716, y: 0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.5000002
+--- !u!114 &263691256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263691252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &263691257
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263691252}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &301931878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,9 +1464,11 @@ GameObject:
   - component: {fileID: 301931879}
   - component: {fileID: 301931880}
   - component: {fileID: 301931881}
-  m_Layer: 0
-  m_Name: Circle (1)
-  m_TagString: Untagged
+  - component: {fileID: 301931883}
+  - component: {fileID: 301931882}
+  m_Layer: 6
+  m_Name: B Circle (1)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1363,6 +1575,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000011920929}
   serializedVersion: 2
   m_Radius: 0.50000006
+--- !u!114 &301931882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301931878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &301931883
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301931878}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &348823722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,12 +1986,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieces:
-  - {fileID: 1921070702}
-  - {fileID: 545378934}
-  - {fileID: 1478991537}
-  - {fileID: 1053065093}
-  - {fileID: 1815267189}
-  - {fileID: 1539875406}
+  - {fileID: 1119826053}
+  - {fileID: 263691252}
+  - {fileID: 1886410726}
+  - {fileID: 197341136}
+  - {fileID: 818093365}
+  - {fileID: 51927266}
+  - {fileID: 1898311680}
+  - {fileID: 3279558422342891522}
+  - {fileID: 506947430}
+  - {fileID: 301931878}
+  - {fileID: 626929821}
+  - {fileID: 97025004}
+  - {fileID: 551624804}
+  - {fileID: 1234967859}
+  - {fileID: 1267232698}
+  - {fileID: 1821816928}
+  - {fileID: 1433160867}
+  - {fileID: 1749824802}
+  - {fileID: 1613849377}
+  - {fileID: 1424864707}
+  - {fileID: 177660257}
 --- !u!4 &354319536
 Transform:
   m_ObjectHideFlags: 0
@@ -1749,11 +2016,11 @@ Transform:
   m_GameObject: {fileID: 354319534}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -12.73, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &415620487
 GameObject:
@@ -2138,9 +2405,11 @@ GameObject:
   - component: {fileID: 506947431}
   - component: {fileID: 506947432}
   - component: {fileID: 506947433}
-  m_Layer: 0
-  m_Name: Circle
-  m_TagString: Untagged
+  - component: {fileID: 506947435}
+  - component: {fileID: 506947434}
+  m_Layer: 6
+  m_Name: B Circle
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2247,6 +2516,46 @@ CircleCollider2D:
   m_Offset: {x: 0.00000047683716, y: -0.0000009536743}
   serializedVersion: 2
   m_Radius: 0.50000006
+--- !u!114 &506947434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506947430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &506947435
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506947430}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,8 +2647,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 502460398}
-  - {fileID: 415620489}
+  - {fileID: 1370373174}
+  - {fileID: 354319536}
   - {fileID: 919046854}
+  - {fileID: 415620489}
   - {fileID: 3570851812857309379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2516,9 +2827,11 @@ GameObject:
   - component: {fileID: 551624805}
   - component: {fileID: 551624806}
   - component: {fileID: 551624807}
-  m_Layer: 0
-  m_Name: Circle (4)
-  m_TagString: Untagged
+  - component: {fileID: 551624809}
+  - component: {fileID: 551624808}
+  m_Layer: 6
+  m_Name: B Circle (4)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2625,6 +2938,46 @@ CircleCollider2D:
   m_Offset: {x: -0.00000059604645, y: 0}
   serializedVersion: 2
   m_Radius: 0.5000001
+--- !u!114 &551624808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551624804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &551624809
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551624804}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &585037144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,9 +3119,11 @@ GameObject:
   - component: {fileID: 626929822}
   - component: {fileID: 626929823}
   - component: {fileID: 626929824}
-  m_Layer: 0
-  m_Name: Circle (2)
-  m_TagString: Untagged
+  - component: {fileID: 626929826}
+  - component: {fileID: 626929825}
+  m_Layer: 6
+  m_Name: B Circle (2)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2875,6 +3230,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.00000071525574}
   serializedVersion: 2
   m_Radius: 0.5000001
+--- !u!114 &626929825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626929821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &626929826
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626929821}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &690369307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,7 +3415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &800654694
 Transform:
   m_ObjectHideFlags: 0
@@ -3030,7 +3425,7 @@ Transform:
   m_GameObject: {fileID: 800654693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.265815, y: 0.8789277, z: 0}
+  m_LocalPosition: {x: 13.265815, y: -13.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3048,8 +3443,10 @@ GameObject:
   - component: {fileID: 818093366}
   - component: {fileID: 818093367}
   - component: {fileID: 818093368}
-  m_Layer: 0
-  m_Name: Circle (2)
+  - component: {fileID: 818093370}
+  - component: {fileID: 818093369}
+  m_Layer: 6
+  m_Name: P Circle (2)
   m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3157,6 +3554,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.5000002
+--- !u!114 &818093369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818093365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &818093370
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818093365}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &827230390
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,7 +3603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 827230391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeartZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3342,7 +3779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &919046854
 Transform:
   m_ObjectHideFlags: 0
@@ -3371,29 +3808,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinkCells:
-  - {fileID: 1590508626}
-  - {fileID: 1649568166}
-  - {fileID: 1856791699}
-  - {fileID: 1223881328}
-  - {fileID: 1971505162}
-  - {fileID: 459469314}
-  - {fileID: 54835098}
-  - {fileID: 1391523814}
-  - {fileID: 440725795}
-  - {fileID: 24326014}
-  - {fileID: 964405951}
-  - {fileID: 1265938259}
-  - {fileID: 690369307}
-  - {fileID: 2084349117}
-  - {fileID: 909807957}
-  - {fileID: 1985279656}
-  - {fileID: 122795617}
-  - {fileID: 1863706485}
-  - {fileID: 585037144}
-  - {fileID: 170676246}
-  - {fileID: 350767639}
-  - {fileID: 986983769}
-  - {fileID: 1181599461}
+  - {fileID: 7461706359700929351}
+  - {fileID: 3186889762860240856}
+  - {fileID: 4819402111002700156}
+  - {fileID: 3082731430666283252}
+  - {fileID: 4849896632066312544}
+  - {fileID: 1604263101026426743}
+  - {fileID: 6778253060636848595}
+  - {fileID: 5078474785195194681}
+  - {fileID: 5305716854477186885}
+  - {fileID: 7003301217329849607}
+  - {fileID: 3340773119649543766}
+  - {fileID: 4393228438505709323}
+  - {fileID: 3680699096022755747}
+  - {fileID: 7031692494846564094}
+  - {fileID: 818690507468808195}
+  - {fileID: 6334363180899288430}
+  - {fileID: 1791650937869965671}
+  - {fileID: 236190325962196458}
+  - {fileID: 1008922997615457394}
+  - {fileID: 6372547088111423112}
+  - {fileID: 1817286943011131176}
+  - {fileID: 7197753754165568713}
+  - {fileID: 6156480510992142704}
+  blueCells:
+  - {fileID: 3721881695064840869}
+  - {fileID: 605601925343633551}
+  - {fileID: 1676523583594312225}
+  - {fileID: 7627499212824119677}
+  - {fileID: 6790343545466100019}
+  - {fileID: 8432431934885677600}
+  - {fileID: 1146264041766381879}
+  - {fileID: 6759570253957456932}
+  - {fileID: 2576954192816000297}
+  - {fileID: 8875902098564518416}
+  - {fileID: 267171397789831454}
+  - {fileID: 1313269032822746217}
+  - {fileID: 2110084918317289695}
+  - {fileID: 6969238506026989256}
+  - {fileID: 6625046822447302243}
+  - {fileID: 1937679984408820306}
+  - {fileID: 8057936135410390906}
+  - {fileID: 1265301334128790459}
+  - {fileID: 4729356451816074695}
+  - {fileID: 280610599689642024}
+  - {fileID: 2055965530193501532}
+  - {fileID: 3109733849073368203}
+  - {fileID: 783485013338545954}
+  yellowCells:
+  - {fileID: 6246523414948498047}
+  - {fileID: 3081729894686344688}
+  - {fileID: 4093586869198181962}
+  - {fileID: 904690990990343386}
+  - {fileID: 9107766039671634200}
+  - {fileID: 7685707441927228561}
+  - {fileID: 2053881730141410147}
+  - {fileID: 8262816614612411084}
+  - {fileID: 2251907938934276870}
+  - {fileID: 2058260757329501911}
+  - {fileID: 285751321069803623}
+  - {fileID: 1485047650949771944}
+  - {fileID: 8468218624999025813}
+  - {fileID: 8469284494240634466}
+  - {fileID: 5254227788259099053}
+  - {fileID: 237333831867216257}
+  - {fileID: 7037979722055142003}
+  - {fileID: 3564090129206306390}
+  - {fileID: 4123747696038871549}
+  - {fileID: 201990773564314931}
+  - {fileID: 20012372454291043}
+  - {fileID: 7794130415375919092}
+  - {fileID: 4996303667104246326}
+  intersectionCells:
+  - {fileID: 1957426767316169289}
+  - {fileID: 6204163588815272107}
+  - {fileID: 8802385855108736181}
+  whiteBlockCells:
+  - {fileID: 1886991503472201979}
+  - {fileID: 5195256074776772040}
+  - {fileID: 8592843242349597978}
 --- !u!1 &964405951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,13 +4176,13 @@ Transform:
   m_LocalScale: {x: 0.45643, y: 0.45643, z: 0.45643}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1119826054}
   - {fileID: 263691253}
   - {fileID: 1886410727}
   - {fileID: 197341137}
   - {fileID: 818093366}
   - {fileID: 51927267}
   - {fileID: 1898311681}
+  - {fileID: 1119826054}
   m_Father: {fileID: 3570851812857309379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053065093
@@ -3865,9 +4358,10 @@ GameObject:
   - component: {fileID: 1119826054}
   - component: {fileID: 1119826055}
   - component: {fileID: 1119826056}
-  m_Layer: 0
-  m_Name: Triangle
-  m_TagString: Untagged
+  - component: {fileID: 1119826057}
+  m_Layer: 6
+  m_Name: P Triangle
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3881,7 +4375,7 @@ Transform:
   m_GameObject: {fileID: 1119826053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3987,6 +4481,33 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!50 &1119826057
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119826053}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1152847431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,9 +4940,11 @@ GameObject:
   - component: {fileID: 1234967860}
   - component: {fileID: 1234967861}
   - component: {fileID: 1234967862}
-  m_Layer: 0
-  m_Name: Circle (5)
-  m_TagString: Untagged
+  - component: {fileID: 1234967864}
+  - component: {fileID: 1234967863}
+  m_Layer: 6
+  m_Name: B Circle (5)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4528,6 +5051,46 @@ CircleCollider2D:
   m_Offset: {x: 0.00000047683716, y: -0.00000035762787}
   serializedVersion: 2
   m_Radius: 0.5000001
+--- !u!114 &1234967863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234967859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1234967864
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234967859}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1235545075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4543,7 +5106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1235545076
 Transform:
   m_ObjectHideFlags: 0
@@ -4553,7 +5116,7 @@ Transform:
   m_GameObject: {fileID: 1235545075}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.666375, y: -0.75954926, z: -0.065276146}
+  m_LocalPosition: {x: 14.69, y: -15.38, z: -0.065276146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4707,9 +5270,10 @@ GameObject:
   - component: {fileID: 1267232699}
   - component: {fileID: 1267232700}
   - component: {fileID: 1267232701}
-  m_Layer: 0
-  m_Name: Triangle (1)
-  m_TagString: Untagged
+  - component: {fileID: 1267232702}
+  m_Layer: 6
+  m_Name: Y Triangle
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4829,6 +5393,33 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!50 &1267232702
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267232698}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1370373173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4855,11 +5446,11 @@ Transform:
   m_GameObject: {fileID: 1370373173}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -12.73, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1370373175
 MonoBehaviour:
@@ -4874,12 +5465,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieces:
-  - {fileID: 1921070702}
-  - {fileID: 545378934}
-  - {fileID: 1478991537}
-  - {fileID: 1053065093}
-  - {fileID: 1815267189}
-  - {fileID: 1539875406}
+  - {fileID: 263691252}
+  - {fileID: 1886410726}
+  - {fileID: 197341136}
+  - {fileID: 818093365}
+  - {fileID: 51927266}
+  - {fileID: 1898311680}
+  - {fileID: 1234967859}
+  - {fileID: 551624804}
+  - {fileID: 97025004}
+  - {fileID: 626929821}
+  - {fileID: 301931878}
+  - {fileID: 506947430}
+  - {fileID: 177660257}
+  - {fileID: 1424864707}
+  - {fileID: 1613849377}
+  - {fileID: 1749824802}
+  - {fileID: 1433160867}
+  - {fileID: 1821816928}
 --- !u!1 &1391523814
 GameObject:
   m_ObjectHideFlags: 0
@@ -5021,9 +5624,11 @@ GameObject:
   - component: {fileID: 1424864708}
   - component: {fileID: 1424864709}
   - component: {fileID: 1424864710}
-  m_Layer: 0
-  m_Name: Circle (10)
-  m_TagString: Untagged
+  - component: {fileID: 1424864712}
+  - component: {fileID: 1424864711}
+  m_Layer: 6
+  m_Name: Y Circle(4)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5130,6 +5735,46 @@ CircleCollider2D:
   m_Offset: {x: -0.00000047683716, y: 0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1424864711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424864707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1424864712
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424864707}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1433160867
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,9 +5786,11 @@ GameObject:
   - component: {fileID: 1433160868}
   - component: {fileID: 1433160869}
   - component: {fileID: 1433160870}
-  m_Layer: 0
-  m_Name: Circle (7)
-  m_TagString: Untagged
+  - component: {fileID: 1433160872}
+  - component: {fileID: 1433160871}
+  m_Layer: 6
+  m_Name: Y Circle(1)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5250,6 +5897,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1433160871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433160867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1433160872
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433160867}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1478991537
 GameObject:
   m_ObjectHideFlags: 0
@@ -5753,9 +6440,11 @@ GameObject:
   - component: {fileID: 1613849378}
   - component: {fileID: 1613849379}
   - component: {fileID: 1613849380}
-  m_Layer: 0
-  m_Name: Circle (9)
-  m_TagString: Untagged
+  - component: {fileID: 1613849382}
+  - component: {fileID: 1613849381}
+  m_Layer: 6
+  m_Name: Y Circle(3)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5862,6 +6551,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1613849381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613849377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1613849382
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613849377}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1646753412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,7 +6600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1646753413}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlueZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6078,9 +6807,11 @@ GameObject:
   - component: {fileID: 1749824803}
   - component: {fileID: 1749824804}
   - component: {fileID: 1749824805}
-  m_Layer: 0
-  m_Name: Circle (8)
-  m_TagString: Untagged
+  - component: {fileID: 1749824807}
+  - component: {fileID: 1749824806}
+  m_Layer: 6
+  m_Name: Y Circle(2)
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6187,6 +6918,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1749824806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749824802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1749824807
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749824802}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1815267189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6360,9 +7131,11 @@ GameObject:
   - component: {fileID: 1821816929}
   - component: {fileID: 1821816930}
   - component: {fileID: 1821816931}
-  m_Layer: 0
-  m_Name: Circle (6)
-  m_TagString: Untagged
+  - component: {fileID: 1821816933}
+  - component: {fileID: 1821816932}
+  m_Layer: 6
+  m_Name: Y Circle
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6469,6 +7242,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1821816932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821816928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1821816933
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821816928}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1856791699
 GameObject:
   m_ObjectHideFlags: 0
@@ -6740,8 +7553,10 @@ GameObject:
   - component: {fileID: 1886410727}
   - component: {fileID: 1886410728}
   - component: {fileID: 1886410729}
-  m_Layer: 0
-  m_Name: Circle (4)
+  - component: {fileID: 1886410731}
+  - component: {fileID: 1886410730}
+  m_Layer: 6
+  m_Name: P Circle (4)
   m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6849,6 +7664,46 @@ CircleCollider2D:
   m_Offset: {x: 0.00000023841858, y: 0}
   serializedVersion: 2
   m_Radius: 0.5000002
+--- !u!114 &1886410730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886410726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1886410731
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886410726}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1898311680
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,8 +7715,10 @@ GameObject:
   - component: {fileID: 1898311681}
   - component: {fileID: 1898311682}
   - component: {fileID: 1898311683}
-  m_Layer: 0
-  m_Name: Circle
+  - component: {fileID: 1898311685}
+  - component: {fileID: 1898311684}
+  m_Layer: 6
+  m_Name: P Circle
   m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6969,6 +7826,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1898311684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898311680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef6437ea735bb4fad2d5edbed7d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!50 &1898311685
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898311680}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1921070702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7391,74 +8288,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 348823723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2016929282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2016929284}
-  - component: {fileID: 2016929283}
-  m_Layer: 0
-  m_Name: GridManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2016929283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016929282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119adb6aeaa1e234f9288a8923d6774a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pinkCells:
-  - {fileID: 1590508626}
-  - {fileID: 1649568166}
-  - {fileID: 1856791699}
-  - {fileID: 1223881328}
-  - {fileID: 1971505162}
-  - {fileID: 459469314}
-  - {fileID: 54835098}
-  - {fileID: 1391523814}
-  - {fileID: 440725795}
-  - {fileID: 24326014}
-  - {fileID: 964405951}
-  - {fileID: 1265938259}
-  - {fileID: 690369307}
-  - {fileID: 2084349117}
-  - {fileID: 909807957}
-  - {fileID: 1985279656}
-  - {fileID: 122795617}
-  - {fileID: 1863706485}
-  - {fileID: 585037144}
-  - {fileID: 170676246}
-  - {fileID: 350767639}
-  - {fileID: 986983769}
-  - {fileID: 1181599461}
---- !u!4 &2016929284
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016929282}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018829781
 GameObject:
   m_ObjectHideFlags: 0
@@ -7468,7 +8297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2018829782}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeartZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7639,7 +8468,7 @@ GameObject:
   - component: {fileID: 5123257488345265036}
   - component: {fileID: 6422735545641381285}
   - component: {fileID: 6422735545641381286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(2,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -7742,7 +8571,7 @@ GameObject:
   - component: {fileID: 5088561339245767999}
   - component: {fileID: 8174378352374869602}
   - component: {fileID: 8174378352374869603}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(0,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -7864,7 +8693,7 @@ GameObject:
   - component: {fileID: 3877163583799158429}
   - component: {fileID: 236156140535992426}
   - component: {fileID: 3877163583799158430}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(2,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -7882,7 +8711,7 @@ GameObject:
   - component: {fileID: 2914719288738831840}
   - component: {fileID: 4001249288119025904}
   - component: {fileID: 4001249288119025905}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(2,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -7900,9 +8729,9 @@ GameObject:
   - component: {fileID: 2596463695874102794}
   - component: {fileID: 6779984359258801560}
   - component: {fileID: 6779984359258801561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(0,2)
-  m_TagString: Untagged
+  m_TagString: GridCell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7918,7 +8747,7 @@ GameObject:
   - component: {fileID: 6077888793151806311}
   - component: {fileID: 2032188697428334571}
   - component: {fileID: 6077888793151806312}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(2,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -7936,7 +8765,7 @@ GameObject:
   - component: {fileID: 4065096229913198025}
   - component: {fileID: 9205316741681109121}
   - component: {fileID: 9205316741681109122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(4,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8155,7 +8984,7 @@ GameObject:
   - component: {fileID: 8135007095543373180}
   - component: {fileID: 7490130011162503129}
   - component: {fileID: 8135007095543373181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(1,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8324,7 +9153,7 @@ GameObject:
   - component: {fileID: 1346856766594713522}
   - component: {fileID: 7915363157688948147}
   - component: {fileID: 7915363157688948148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(3,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8357,7 +9186,7 @@ GameObject:
   - component: {fileID: 5147071583764480012}
   - component: {fileID: 6076859462765384818}
   - component: {fileID: 6076859462765384819}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(1,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8440,7 +9269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933662890957632606}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Adj-Intersection (YP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8458,7 +9287,7 @@ GameObject:
   - component: {fileID: 4876963181123075808}
   - component: {fileID: 714264654286891359}
   - component: {fileID: 4876963181123075809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(1,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8489,7 +9318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5467643140659597269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Adj-Intersection (BY)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8507,7 +9336,7 @@ GameObject:
   - component: {fileID: 2750093341238638658}
   - component: {fileID: 5680897230959155357}
   - component: {fileID: 5680897230959155358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(1,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8590,7 +9419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527206399744140072}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Adj-Intersection(YP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8608,7 +9437,7 @@ GameObject:
   - component: {fileID: 452716724514633650}
   - component: {fileID: 7910055037857447364}
   - component: {fileID: 7910055037857447365}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(3,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8656,7 +9485,7 @@ GameObject:
   - component: {fileID: 8556488006044910811}
   - component: {fileID: 5362039892959336133}
   - component: {fileID: 8556488006044910812}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(3,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8674,9 +9503,9 @@ GameObject:
   - component: {fileID: 3004854338826800251}
   - component: {fileID: 7500308219304434470}
   - component: {fileID: 7500308219304434471}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(0,3)
-  m_TagString: Untagged
+  m_TagString: GridCell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8707,7 +9536,7 @@ GameObject:
   - component: {fileID: 1166996071727400406}
   - component: {fileID: 3668418774828813640}
   - component: {fileID: 3668418774828813641}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(4,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8810,7 +9639,7 @@ GameObject:
   - component: {fileID: 4255376599851571999}
   - component: {fileID: 5384186751728277162}
   - component: {fileID: 5384186751728277163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(3,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8902,7 +9731,7 @@ GameObject:
   - component: {fileID: 785909301999459909}
   - component: {fileID: 7618794365867732751}
   - component: {fileID: 7618794365867732752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(4,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -8987,7 +9816,7 @@ GameObject:
   - component: {fileID: 845326585375360064}
   - component: {fileID: 8476623226389173028}
   - component: {fileID: 8476623226389173029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(4,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9005,7 +9834,7 @@ GameObject:
   - component: {fileID: 4711739109615926361}
   - component: {fileID: 4162523476555287084}
   - component: {fileID: 4711739109615926362}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(0,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9024,7 +9853,7 @@ GameObject:
   - component: {fileID: 3953881248684550107}
   - component: {fileID: 8153440872206643318}
   - component: {fileID: 8153440872206643319}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: W(3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9060,7 +9889,7 @@ GameObject:
   - component: {fileID: 7446189354146075016}
   - component: {fileID: 6802347023953015768}
   - component: {fileID: 7446189354146075017}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(3,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9079,7 +9908,7 @@ GameObject:
   - component: {fileID: 6127717744027862271}
   - component: {fileID: 7099663985689533859}
   - component: {fileID: 7099663985689533860}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: I(3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9216,7 +10045,7 @@ GameObject:
   - component: {fileID: 7565728599243816285}
   - component: {fileID: 2163813191245782389}
   - component: {fileID: 7565728599243816286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(3,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9234,7 +10063,7 @@ GameObject:
   - component: {fileID: 2778013753914595891}
   - component: {fileID: 4997629452776129335}
   - component: {fileID: 4997629452776129336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(1,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9252,7 +10081,7 @@ GameObject:
   - component: {fileID: 8395606655904737634}
   - component: {fileID: 7847442594397762276}
   - component: {fileID: 8395606655904737635}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(2,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9268,7 +10097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 35336431596799138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 'White blocks '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9301,7 +10130,7 @@ GameObject:
   - component: {fileID: 5546208802340856065}
   - component: {fileID: 7834868106356594327}
   - component: {fileID: 7834868106356594328}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(1,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9438,7 +10267,7 @@ GameObject:
   - component: {fileID: 6432930766833301851}
   - component: {fileID: 7327433256941872453}
   - component: {fileID: 7327433256941872454}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(3,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9553,7 +10382,7 @@ GameObject:
   - component: {fileID: 1711557467740623071}
   - component: {fileID: 1975202078142117037}
   - component: {fileID: 2576954192816000298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(1,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9589,7 +10418,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -9629,7 +10458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5770936313306634853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Adj-Intersection (YB)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9645,7 +10474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6480262464830105624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PinkZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9848,7 +10677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8053326212080744500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: YellowZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9866,7 +10695,7 @@ GameObject:
   - component: {fileID: 3701930734772918970}
   - component: {fileID: 5748471436882701474}
   - component: {fileID: 5748471436882701475}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(1,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9884,7 +10713,7 @@ GameObject:
   - component: {fileID: 3713340084456469997}
   - component: {fileID: 7988214642274535420}
   - component: {fileID: 7988214642274535421}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(3,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9917,7 +10746,7 @@ GameObject:
   - component: {fileID: 8459447695397903350}
   - component: {fileID: 597211894752212564}
   - component: {fileID: 8459447695397903351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(2,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -9987,7 +10816,7 @@ GameObject:
   - component: {fileID: 4989617373992518962}
   - component: {fileID: 4995700091722872385}
   - component: {fileID: 4995700091722872386}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(1,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -10109,9 +10938,10 @@ GameObject:
   - component: {fileID: 6672056759007266947}
   - component: {fileID: 375957405342125020}
   - component: {fileID: 6672056759007266948}
-  m_Layer: 0
-  m_Name: Triangle
-  m_TagString: Untagged
+  - component: {fileID: 6672056759007266949}
+  m_Layer: 6
+  m_Name: B Triangle
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10127,7 +10957,7 @@ GameObject:
   - component: {fileID: 132010940341781643}
   - component: {fileID: 134983472992637012}
   - component: {fileID: 3340773119649543767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(4,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -10163,7 +10993,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10346,7 +11176,7 @@ GameObject:
   - component: {fileID: 7099753176837567288}
   - component: {fileID: 1053189454627521110}
   - component: {fileID: 7099753176837567289}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(0,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -10362,7 +11192,7 @@ Transform:
   m_GameObject: {fileID: 6405061395262948277}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.722967, y: -0.2597121, z: 10.062078}
+  m_LocalPosition: {x: -0.34, y: -0.19, z: 10.062078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10614,7 +11444,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10641,7 +11471,7 @@ GameObject:
   - component: {fileID: 8041429505878589180}
   - component: {fileID: 3189582724393374771}
   - component: {fileID: 8041429505878589181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(3,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -10689,7 +11519,7 @@ GameObject:
   - component: {fileID: 3082898322879773820}
   - component: {fileID: 3189170893044879975}
   - component: {fileID: 3721881695064840870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(0,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -10725,7 +11555,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10936,7 +11766,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11196,7 +12026,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11411,7 +12241,7 @@ GameObject:
   - component: {fileID: 1261631767725362891}
   - component: {fileID: 3897460070972012409}
   - component: {fileID: 4093586869198181963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(2,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -11447,7 +12277,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11474,7 +12304,7 @@ GameObject:
   - component: {fileID: 5336033079875208842}
   - component: {fileID: 2138834352127491228}
   - component: {fileID: 5336033079875208843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(0,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -11594,7 +12424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7887482019530319034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OuterPerimeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11701,7 +12531,7 @@ GameObject:
   - component: {fileID: 1093113926370912301}
   - component: {fileID: 8006387541429128028}
   - component: {fileID: 8006387541429128029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(4,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -11871,7 +12701,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11898,7 +12728,7 @@ GameObject:
   - component: {fileID: 5519415019834388689}
   - component: {fileID: 324402749197308713}
   - component: {fileID: 5519415019834388690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(2,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -11916,7 +12746,7 @@ GameObject:
   - component: {fileID: 4931616081618226968}
   - component: {fileID: 4090933995491914265}
   - component: {fileID: 4931616081618226969}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(2,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -11986,7 +12816,7 @@ GameObject:
   - component: {fileID: 752068084548545454}
   - component: {fileID: 9219112995406505668}
   - component: {fileID: 9219112995406505669}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(3,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -12037,7 +12867,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12164,7 +12994,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12189,7 +13019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4954459855796063209}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Intersections
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12310,7 +13140,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12337,7 +13167,7 @@ GameObject:
   - component: {fileID: 5232738198295898197}
   - component: {fileID: 4823348481119029485}
   - component: {fileID: 5232738198295898198}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(3,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -12425,7 +13255,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12452,7 +13282,7 @@ GameObject:
   - component: {fileID: 8739226140970987552}
   - component: {fileID: 1754928371878836146}
   - component: {fileID: 8739226140970987553}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(1,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -12672,7 +13502,7 @@ GameObject:
   - component: {fileID: 5158204497655848593}
   - component: {fileID: 3849308959019442884}
   - component: {fileID: 5195256074776772041}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: W(2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -12708,7 +13538,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12773,7 +13603,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12800,7 +13630,7 @@ GameObject:
   - component: {fileID: 8479992106401249116}
   - component: {fileID: 3622694819090003085}
   - component: {fileID: 8479992106401249117}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(1,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -12818,7 +13648,7 @@ GameObject:
   - component: {fileID: 6463200038538445828}
   - component: {fileID: 3546043649870906106}
   - component: {fileID: 6463200038538445829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(1,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -12869,7 +13699,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13070,7 +13900,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13148,7 +13978,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13260,7 +14090,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13409,7 +14239,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13434,7 +14264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2645113836673299377}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeartZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13476,7 +14306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &6076859462765384818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13558,7 +14388,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13618,7 +14448,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13704,7 +14534,7 @@ GameObject:
   - component: {fileID: 8316209793158580715}
   - component: {fileID: 5690681796114778800}
   - component: {fileID: 8316209793158580716}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(0,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -13720,7 +14550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4621758293585165996}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OuterPerimeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13754,7 +14584,7 @@ GameObject:
   - component: {fileID: 6827972673223560660}
   - component: {fileID: 6848075642068810505}
   - component: {fileID: 6848075642068810506}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: I(2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -13772,7 +14602,7 @@ GameObject:
   - component: {fileID: 5142539121182997724}
   - component: {fileID: 3722787251292891840}
   - component: {fileID: 6246523414948498048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(0,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -13808,7 +14638,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13913,7 +14743,7 @@ GameObject:
   - component: {fileID: 682841805362402791}
   - component: {fileID: 7259876374550366565}
   - component: {fileID: 7259876374550366566}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(2,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -13931,7 +14761,7 @@ GameObject:
   - component: {fileID: 4255415643060169928}
   - component: {fileID: 7702002625536715249}
   - component: {fileID: 7702002625536715250}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(3,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -13947,7 +14777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3570851812857309379}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: iZindawo Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14035,7 +14865,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14110,7 +14940,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14208,7 +15038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7576735538092011833}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OuterPerimeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14226,7 +15056,7 @@ GameObject:
   - component: {fileID: 8984196878702627444}
   - component: {fileID: 6596860902699807097}
   - component: {fileID: 8984196878702627445}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(2,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14296,6 +15126,33 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!50 &6672056759007266949
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279558422342891522}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &6759570253957456932
 GameObject:
   m_ObjectHideFlags: 0
@@ -14307,7 +15164,7 @@ GameObject:
   - component: {fileID: 2373719501602936479}
   - component: {fileID: 4477592067282296536}
   - component: {fileID: 6759570253957456933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(2,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14343,7 +15200,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14370,7 +15227,7 @@ GameObject:
   - component: {fileID: 5101218485214508636}
   - component: {fileID: 9163657450651897798}
   - component: {fileID: 9163657450651897799}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(2,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14458,7 +15315,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14485,7 +15342,7 @@ GameObject:
   - component: {fileID: 915810069510375944}
   - component: {fileID: 3600005601396523830}
   - component: {fileID: 6790343545466100020}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(4,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14521,7 +15378,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14746,7 +15603,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14778,7 +15635,7 @@ GameObject:
   - component: {fileID: 7182679383816713106}
   - component: {fileID: 3896348715910624384}
   - component: {fileID: 7182679383816713107}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(1,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14796,7 +15653,7 @@ GameObject:
   - component: {fileID: 3740567401404468974}
   - component: {fileID: 3114651872835309218}
   - component: {fileID: 7003301217329849608}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(2,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14832,7 +15689,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14874,7 +15731,7 @@ GameObject:
   - component: {fileID: 4626111652775234831}
   - component: {fileID: 842125308760735955}
   - component: {fileID: 7031692494846564095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(4,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14910,7 +15767,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14937,7 +15794,7 @@ GameObject:
   - component: {fileID: 4905559598677644603}
   - component: {fileID: 1582522250093136698}
   - component: {fileID: 7037979722055142004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(4,1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -14973,7 +15830,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15087,7 +15944,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15152,7 +16009,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15212,7 +16069,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15239,7 +16096,7 @@ GameObject:
   - component: {fileID: 1633534542448760814}
   - component: {fileID: 8155833377832259137}
   - component: {fileID: 8155833377832259138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(0,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -15327,7 +16184,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15424,7 +16281,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15484,7 +16341,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15511,7 +16368,7 @@ GameObject:
   - component: {fileID: 3725509070104126537}
   - component: {fileID: 5352404936737040605}
   - component: {fileID: 7461706359700929352}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P(0,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -15547,7 +16404,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15696,7 +16553,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15756,7 +16613,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15875,7 +16732,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15902,7 +16759,7 @@ GameObject:
   - component: {fileID: 4562557996217915409}
   - component: {fileID: 3487856010594175520}
   - component: {fileID: 7627499212824119678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(4,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -15938,7 +16795,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15965,7 +16822,7 @@ GameObject:
   - component: {fileID: 577557096157030696}
   - component: {fileID: 3436683524168844968}
   - component: {fileID: 7685707441927228562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(2,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -16001,7 +16858,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16098,7 +16955,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16123,7 +16980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8058933588705715968}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Adj-Intersection(PB)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16141,7 +16998,7 @@ GameObject:
   - component: {fileID: 7007697585611461092}
   - component: {fileID: 2419789543213513018}
   - component: {fileID: 7794130415375919093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(1,0)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -16177,7 +17034,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16292,7 +17149,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16463,7 +17320,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16560,7 +17417,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16657,7 +17514,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16754,7 +17611,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16814,7 +17671,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16862,7 +17719,7 @@ GameObject:
   - component: {fileID: 1579070173141137677}
   - component: {fileID: 5095071523311522650}
   - component: {fileID: 8057936135410390907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(3,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -16898,7 +17755,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16976,7 +17833,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17090,7 +17947,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17192,7 +18049,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17289,7 +18146,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17316,7 +18173,7 @@ GameObject:
   - component: {fileID: 2302883181205629772}
   - component: {fileID: 224954275868444010}
   - component: {fileID: 8262816614612411085}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(3,2)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -17352,7 +18209,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17412,7 +18269,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17487,7 +18344,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17514,7 +18371,7 @@ GameObject:
   - component: {fileID: 6300437103304003361}
   - component: {fileID: 2989055919894532607}
   - component: {fileID: 8432431934885677601}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(4,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -17550,7 +18407,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17610,7 +18467,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17637,7 +18494,7 @@ GameObject:
   - component: {fileID: 574091859218293189}
   - component: {fileID: 4177452769681165816}
   - component: {fileID: 8468218624999025814}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(3,4)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -17673,7 +18530,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17700,7 +18557,7 @@ GameObject:
   - component: {fileID: 1983003354559046449}
   - component: {fileID: 2805426329539655204}
   - component: {fileID: 8469284494240634467}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(4,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -17736,7 +18593,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17833,7 +18690,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17893,7 +18750,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17953,7 +18810,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17981,7 +18838,7 @@ GameObject:
   - component: {fileID: 1614422704238194377}
   - component: {fileID: 731593290383513802}
   - component: {fileID: 8592843242349597979}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: W(1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -18017,7 +18874,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18082,7 +18939,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18110,7 +18967,7 @@ GameObject:
   - component: {fileID: 4308683840091332256}
   - component: {fileID: 4052637404138600177}
   - component: {fileID: 8802385855108736182}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: I(1)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -18146,7 +19003,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18193,9 +19050,9 @@ GameObject:
   - component: {fileID: 2083345207685302459}
   - component: {fileID: 4887736424566291878}
   - component: {fileID: 8875902098564518417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: B(0,1)
-  m_TagString: Untagged
+  m_TagString: GridCell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18229,7 +19086,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18254,7 +19111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7832394310905997195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Adj-Intersection (PB)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18305,7 +19162,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18332,7 +19189,7 @@ GameObject:
   - component: {fileID: 8859900538566938486}
   - component: {fileID: 3665000939716047658}
   - component: {fileID: 9107766039671634201}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Y(1,3)
   m_TagString: GridCell
   m_Icon: {fileID: 0}
@@ -18368,7 +19225,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18465,7 +19322,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18562,7 +19419,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18659,7 +19516,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18682,6 +19539,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 800654694}
   - {fileID: 1235545076}
-  - {fileID: 2016929284}
-  - {fileID: 354319536}
-  - {fileID: 1370373174}
